@@ -22,7 +22,6 @@ body {
   margin: 0;
 }
 
-
 /* basic layout for nav in active and non active state*/
 nav {
   background-color: #fff;
@@ -40,7 +39,6 @@ nav.active {
   width: 350px;
 }
 
-
 /* set up of nav ul in active and non active state */
 nav ul {
   display: flex;
@@ -53,9 +51,7 @@ nav ul {
 
 nav.active ul {
   width: 100%;
-
 }
-
 
 /* setting up rotation of the letters */
 nav ul li {
@@ -69,7 +65,6 @@ nav.active ul li {
   transform: rotateY(360deg);
 }
 
-
 /* links*/
 nav ul a {
   position: relative;
@@ -78,3 +73,42 @@ nav ul a {
   margin: 0 10px;
 }
 
+/* button styling */
+.icon {
+  background-color: #fff;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+  height: 30px;
+  width: 30px;
+}
+
+.icon:focus {
+  outline: 0;
+}
+
+.icon .line {
+  background-color: #5290f9;
+  height: 2px;
+  width: 20px;
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  transition: transform 0.6s linear;
+}
+
+/* separating the lines for the button to = */
+.icon .line2 {
+  top: auto;
+  bottom: 10px;
+}
+
+/* setting up rotation of the lines = into the X */
+nav.active .icon .line1 {
+  transform: rotate(-765deg) translateY(5.5px);
+}
+
+nav.active .icon .line2 {
+  transform: rotate(765deg) translateY(-5.5px);
+}
